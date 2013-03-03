@@ -1,0 +1,8 @@
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.xml
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.Resources.resources
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.vbproj.GenerateResource.Cache
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.xml
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

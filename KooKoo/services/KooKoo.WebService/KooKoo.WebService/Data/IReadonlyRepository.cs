@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace KooKoo.WebService.Data {
 
-    public interface IRepository<T> : IReadonlyRepository<T> where T : class  {
+    public interface IReadonlyRepository<T> where T : class {
 
-        void Save(T entity);
-        void Delete(T entity);
-        void DeleteAll();
+        IEnumerable<T> GetAll();
+        T Get( Guid id );
 
     }
 }

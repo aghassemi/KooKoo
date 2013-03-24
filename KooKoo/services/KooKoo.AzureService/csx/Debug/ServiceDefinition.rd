@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KooKoo.AzureService" generation="1" functional="0" release="0" Id="7c378679-28e6-41aa-9305-69c94df10677" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KooKoo.AzureService" generation="1" functional="0" release="0" Id="13f8f361-9a58-46ad-90f5-ef13e8695186" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="KooKoo.AzureServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -81,9 +81,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="16fb6bb4-9e1b-4f1e-8556-c57b44d8e362" ref="Microsoft.RedDog.Contract\ServiceContract\KooKoo.AzureServiceContract@ServiceDefinition">
+    <implementation Id="a01948f6-70d7-4f42-9964-df6d04b546a1" ref="Microsoft.RedDog.Contract\ServiceContract\KooKoo.AzureServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="84fb3fae-1533-4a10-8015-2fbe45222ffc" ref="Microsoft.RedDog.Contract\Interface\KooKoo.WebService:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="601fe80e-6ffe-4505-b620-510045a384df" ref="Microsoft.RedDog.Contract\Interface\KooKoo.WebService:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/KooKoo.AzureService/KooKoo.AzureServiceGroup/KooKoo.WebService:Endpoint1" />
           </inPort>

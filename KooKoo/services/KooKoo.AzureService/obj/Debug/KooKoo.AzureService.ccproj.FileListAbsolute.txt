@@ -49,3 +49,4 @@ C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.AzureService\obj\Deb
 C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.AzureService\obj\Debug\KooKoo.WebService\bin\System.Web.WebPages.Razor.xml
 C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.AzureService\obj\Debug\KooKoo.WebService\bin\System.Web.WebPages.xml
 C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.AzureService\obj\Debug\KooKoo.WebService\bin\WebGrease.dll
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.AzureService\obj\Debug\KooKoo.WebService\bin\EnableCompression.cmd

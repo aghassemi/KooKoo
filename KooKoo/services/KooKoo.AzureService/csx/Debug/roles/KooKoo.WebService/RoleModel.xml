@@ -13,6 +13,11 @@
         <Variable name="WaRoleType" value="IISWebRole" />
       </Environment>
     </Task>
+    <Task commandLine="EnableCompression.cmd" executionContext="elevated" relativePath="approot\bin">
+      <Environment>
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
   </Startup>
   <Runtime>
     <EntryPoint>

@@ -13,7 +13,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="StorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=http;AccountName=kookoo;AccountKey=UGT8OKLcf82tY2RtRA1T/k/egcahCv0LHws0PYKHvRyjQrpZBKnh15NZH5szZywsNEOAPOO60xEyZh6xiC5BeQ==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

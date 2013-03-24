@@ -20,33 +20,21 @@ namespace KooKoo.WebService.Controllers
         }
 
         // GET api/values
-        public IEnumerable<Story> Get()
+        public IEnumerable<StoryEntity> Get()
         {
+
             return m_storyRepo.GetAll();
+            
         }
 
-        [System.Web.Http.AcceptVerbs("GET")]
-        [System.Web.Http.HttpGet]
-        public void SampleData() {
+        // POST api/values
+        public StoryEntity Post(
+                StoryEntity story
+            ) {
 
-            m_storyRepo.DeleteAll();
+            m_storyRepo.Save(story);
+            return story;
 
-            Story s = new Story();
-            s.StoryText = "this is sample story";
-
-            Story s2 = new Story();
-            s2.StoryText = "Man this is cold in here!";
-
-            Story s3 = new Story();
-            s3.StoryText = "Best lunch ever. I wish I could come here everyday for the rest of my life";
-
-            Story s4 = new Story();
-            s4.StoryText = "What is this crap anyway";
-
-            m_storyRepo.Save(s);
-            m_storyRepo.Save(s2);
-            m_storyRepo.Save(s3);
-            m_storyRepo.Save(s4);
         }
 
     }

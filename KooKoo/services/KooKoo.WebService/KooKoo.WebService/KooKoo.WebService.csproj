@@ -154,10 +154,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlacesController.cs" />
     <Compile Include="Controllers\StoriesController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Data\IReadonlyRepository.cs" />
+    <Compile Include="Data\IPlaceRepository.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\IStoryRepository.cs" />
-    <Compile Include="Data\Story.cs" />
+    <Compile Include="Data\PlaceEntity.cs" />
+    <Compile Include="Data\PlaceRepository.cs" />
+    <Compile Include="Data\StoryEntity.cs" />
     <Compile Include="Data\StoryRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -221,7 +227,20 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="EnableCompression.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Sandbox\app.js" />
+    <Content Include="Sandbox\css\bootstrap.css" />
+    <Content Include="Sandbox\css\bootstrap.min.css" />
+    <Content Include="Sandbox\img\glyphicons-halflings-white.png" />
+    <Content Include="Sandbox\img\glyphicons-halflings.png" />
+    <Content Include="Sandbox\js\backbone-min.js" />
+    <Content Include="Sandbox\js\bootstrap.js" />
+    <Content Include="Sandbox\js\bootstrap.min.js" />
+    <Content Include="Sandbox\js\underscore-min.js" />
+    <Content Include="Sandbox\Sandbox.html" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

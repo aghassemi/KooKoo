@@ -50,3 +50,4 @@ C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.WebService\KooKoo.We
 C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.WebService\KooKoo.WebService\bin\Microsoft.WindowsAzure.Diagnostics.xml
 C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.WebService\KooKoo.WebService\bin\Microsoft.WindowsAzure.StorageClient.xml
 C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.WebService\KooKoo.WebService\obj\Debug\KooKoo.WebService.csprojResolveAssemblyReference.cache
+C:\Users\Ali\Documents\GitHub\KooKoo\KooKoo\services\KooKoo.WebService\KooKoo.WebService\bin\EnableCompression.cmd

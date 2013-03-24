@@ -11,7 +11,7 @@ namespace KooKoo.WebService.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Redirect("/sandbox/sandbox.html");
         }
     }
 }

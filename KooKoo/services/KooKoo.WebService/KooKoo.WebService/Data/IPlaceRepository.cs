@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace KooKoo.WebService.Data {
 
-    public interface IRepository<T> : IReadonlyRepository<T> where T : class  {
+    interface IPlaceRepository : IReadonlyRepository<PlaceEntity> {
 
-        void Save(T entity);
-        void Delete(T entity);
-        void DeleteAll();
+        IEnumerable<PlaceEntity> GetRadius(double longitude, double latitude, double radius);
 
     }
 }

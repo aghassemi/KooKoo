@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sandbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/sandbox/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+        #post-story-container {
+            margin: 10px auto;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0px;
+            margin-top: 10px;
+        }
+
+        .story {
+            border-bottom: 1px solid #E8E8E8;
+            padding: 12px 0px;
+        }
+
+        .story blockquote {
+            margin-bottom: 0px;
+        }
+
+        .story img {
+            margin-top: 5px;
+            max-width: 100%;
+        }
+
+        .navbar-inner {
+            border-radius: 0px;
+            padding: 0px;
+        }
+
+        body {
+            padding: 0px;
+        }
+
+        .main {
+            padding: 0px 10px;
+        }
+
+        #input-file {
+             display: block;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
+        #file-thumb-container {
+            display: none;
+        }
+
+        #file-thumb-container {
+            margin-top: 5px;
+        }
+
+        .thumbnail {
+            max-width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <a class="brand" href="/">KooKoo</a>
+            <ul class="nav pull-right">
+                <li class="divider-vertical"></li>
+                <li><a href="/"><span class="icon-refresh icon-white"></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container main">
+        <div id="post-story-container">
+
+            <textarea id="story-input" placeholder="What's happening?" class="input-block-level" rows="2"></textarea>
+
+            <input id="input-file" name="storyfile" type="file" accept="image/*" />
+
+            <button id="btn-add-file" class="btn" type="button">Add Image</button>
+
+            <button id="btn-story-post" class="btn btn-primary" type="button">Post</button>
+
+            <div id="file-thumb-container"><img class="thumbnail" alt="" /></div>
+
+            <div id="places-container">
+
+            </div>
+
+        </div>
+
+        <div id="stories-container" class="container">
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <script type="text/template" id="tpl-story-item">
+            <div class="row story">
+
+            <blockquote>
+                    <p><%= StoryText %></p>
+            <% if (ImageUri) { %>
+                <p><img src="<%= ImageUri %>" alt=""/></p>
+            <% } %> 
+                <small><cite title="Source Title">"<%= TimeAgo %> near <%= Longitude %>-<%= Latitude %></cite></small>
+            </blockquote>
+            </div>
+    </script>
+
+        <script type="text/template" id="tpl-place-item">
+            <div class="row place">
+                
+                <div> <%= name %></div>
+                
+            </div>
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/sandbox/js/underscore-min.js"></script>
+    <script src="/sandbox/js/backbone-min.js"></script>
+    <script src="/sandbox/js/bootstrap.min.js"></script>
+    <script src="/sandbox/app.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
+
+
+
+</body>
+</html>

@@ -16,6 +16,10 @@
             margin-top: 10px;
         }
 
+        li {
+            margin: 0px;
+        }
+
         .story {
             border-bottom: 1px solid #E8E8E8;
             padding: 12px 0px;
@@ -60,6 +64,14 @@
 
         .thumbnail {
             max-width: 100px;
+        }
+
+        #places-container ul li.selected .place {
+                background-color: aliceblue;
+        }
+
+        .place {
+            padding: 10px;
         }
     </style>
 
@@ -124,6 +136,10 @@
     <script src="/sandbox/js/backbone-min.js"></script>
     <script src="/sandbox/js/bootstrap.min.js"></script>
     <script src="/sandbox/app.js"></script>
+    <script src="//js.mobozi.com/v1/mobozi.js"></script>
+    <script type="text/javascript">
+        mobozi.init('2e041bc0672ac223b240f60c07b06a856e6d9097');
+</script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
 
 

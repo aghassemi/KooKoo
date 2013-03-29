@@ -14,7 +14,7 @@ namespace KooKoo.WebService.Data {
         public string StoryText { get; set; }
         public double Longitude { get; set; }
         public double Latitude { get; set; }
- 
+
         public Guid? PublisherId { get; set; }
 
         public Guid? PlaceId { get; set; }
@@ -22,14 +22,15 @@ namespace KooKoo.WebService.Data {
         public double PlaceLongitude { get; set; }
         public string PlaceName { get; set; }
         public bool HasImage { get; set; }
+        public string MoboziImageUrl { get; set; }
         public DateTimeOffset CreationTime { get; set; }
 
         public Uri ImageUri {
             get {
                 if (this.HasImage) {
-                    return new Uri("http://kookoo.blob.core.windows.net/stories/" + this.Id.ToString() );
-                }
-
+                    return new Uri("http://kookoo.blob.core.windows.net/stories/" + this.Id.ToString());
+                } else if (!String.IsNullOrEmpty(this.MoboziImageUrl))
+                    return new Uri(this.MoboziImageUrl);
                 return null;
             }
         }

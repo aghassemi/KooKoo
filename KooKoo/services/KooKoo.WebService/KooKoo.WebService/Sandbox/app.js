@@ -162,7 +162,7 @@ PostStoryView = Backbone.View.extend({
         
         var me = this;
 
-        App.Location.Get().on('success', function ( coords ) {
+        var saveStory = function ( coords, imageUrl ) {
             var story = new Story();
             var latitude = null;
             var longitude = null;
@@ -172,22 +172,35 @@ PostStoryView = Backbone.View.extend({
                 {
                     storytext: me.stroyTextInput.val(),
                     latitude: latitude,
-                    longitude: longitude
+                    longitude: longitude,
+                    MoboziImageUrl: imageUrl
                 }
             );
+            me.thumbView.hide();
             story.save(
              {},
              {
                  success: function (model, response) {
-                     if ($('#input-file').val()) {
-                         me.uploadFile(model.get('Id'));
-                     } else {
-                         App.storyList.add( model );
-                     }
+                    // if ($('#input-file').val()) {
+                    //     me.uploadFile(model.get('Id'));
+                    // } else {
+                     App.storyList.fetch();
+                    // }
                  }
              }
              );
             me.stroyTextInput.val('');
+        };
+
+        App.Location.Get().on('success', function ( coords ) {
+            if ($('#input-file').val()) {
+                var file = document.getElementById('input-file').files[0];
+                    mobozi.image.uploadGetUrl({ "file": file }, function (response) {
+                        saveStory(coords, response.data.imageUrl);
+                });
+            } else {
+                saveStory(coords, null);
+            }
         });
         
 
@@ -232,6 +245,12 @@ PlaceListItemView = Backbone.View.extend({
     tagName: "li",
 
     template: _.template($('#tpl-place-item').html()),
+
+    events: { 'click': 'select' },
+
+    select: function() {
+        $(this.el).addClass('selected');
+    },
 
     render: function (eventName) {
         $(this.el).html(this.template(this.model.toJSON()));

@@ -23,7 +23,9 @@ namespace KooKoo.WebService.Controllers
         public IEnumerable<StoryEntity> Get()
         {
 
-            return m_storyRepo.GetAll();
+            IEnumerable<StoryEntity> all = m_storyRepo.GetAll();
+
+            return m_storyRepo.GetAll().Take( 20 );
             
         }
 

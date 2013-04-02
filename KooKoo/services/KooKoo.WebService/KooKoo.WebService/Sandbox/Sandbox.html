@@ -5,102 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="/sandbox/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style>
-        #post-story-container {
-            margin: 10px auto;
-        }
-
-        ul {
-            list-style: none;
-            margin: 0px;
-            margin-top: 10px;
-        }
-
-        li {
-            margin: 0px;
-        }
-
-        .story {
-            border-bottom: 1px solid #E8E8E8;
-            padding: 12px 0px;
-        }
-
-        .story blockquote {
-            margin-bottom: 0px;
-        }
-
-        .story img {
-            margin-top: 5px;
-            max-width: 100%;
-        }
-
-        .navbar-inner {
-            border-radius: 0px;
-            padding: 0px;
-        }
-
-        body {
-            padding: 0px;
-        }
-
-        .main {
-            padding: 0px 10px;
-        }
-
-        #input-file {
-             display: block;
-            visibility: hidden;
-            width: 0;
-            height: 0;
-        }
-
-        #file-thumb-container {
-            display: none;
-        }
-
-        #file-thumb-container {
-            margin-top: 5px;
-        }
-
-        .thumbnail {
-            max-width: 100px;
-        }
-
-        #places-container ul li.selected .place {
-                background-color: aliceblue;
-        }
-
-        .place {
-            padding: 10px;
-        }
-    </style>
-
+    <link href="/sandbox/css/app.css" rel="stylesheet" media="screen">
 </head>
 <body>
     <div class="navbar navbar-inverse">
         <div class="navbar-inner">
-            <a class="brand" href="/">KooKoo</a>
-            <ul class="nav pull-right">
-                <li class="divider-vertical"></li>
-                <li><a href="/"><span class="icon-refresh icon-white"></span></a></li>
+
+            <ul class="nav">
+                <li id="nav-home"><a href="/"><span class="icon-home icon-white"></span></a></li>
+                 <li id="nav-back"><a href="/"><span class="icon-chevron-left icon-white"></span></a></li>
+                <li class="divider-vertical-white"></li>
+                <li>
+                    <a class="brand" href="/">KooKoo</a>
+                </li>
+            </ul>
+            <ul id="nav-main-right" class="nav pull-right">
+
+                <li class="toolbar-post"><a>
+                    <input onclick="event.preventDefault();" style="margin-right: 5px; font-size: 80%; width:120px;" placeholder="What's happening?" /><span class="icon-edit icon-white"></span></a></li>
+            </ul>
+
+            <ul id="nav-post-right" class="nav pull-right">
+                <li><a id="btn-story-post" href="javascript://">Post</a></li>
             </ul>
         </div>
     </div>
     <div class="container main">
         <div id="post-story-container">
 
-            <textarea id="story-input" placeholder="What's happening?" class="input-block-level" rows="2"></textarea>
+            <textarea id="story-input" placeholder="Aha! What is it? Where is it? You have a picture of it?" class="input-block-level" rows="2"></textarea>
 
             <input id="input-file" name="storyfile" type="file" accept="image/*" />
 
-            <button id="btn-add-file" class="btn" type="button">Add Image</button>
+            <a id="btn-add-file" class="kButton" href="javascript:void(0);"><span class="icon-camera"></span></a>
 
-            <button id="btn-story-post" class="btn btn-primary" type="button">Post</button>
-
-            <div id="file-thumb-container"><img class="thumbnail" alt="" /></div>
+            <div id="file-thumb-container">
+                <img class="thumbnail" alt="" />
+            </div>
 
             <div id="places-container">
-
             </div>
 
         </div>
@@ -117,14 +60,28 @@
                     <p><%= StoryText %></p>
             <% if (ImageUri) { %>
                 <p><img src="<%= ImageUri %>" alt=""/></p>
+            <% } %>
+                <div class="social">
+                   
+                       <div class="kButton pull-left" style="margin-left:-10px"> <span class="nums">12 comments</span><span style="display:inline-block; margin-top:2px" class="icon-comment"/></div>
+ 
+                    <div class="kButton pull-right"><span class="icon-exclamation-sign"/></div>
+                    <div class="kButton pull-right"><span class="nums">27</span><span class="icon-thumbs-up"/></div>
+                    
+        
+                    <div style="clear:both"/>
+                </div>
+                <small><cite title="Source Title"><%= TimeAgo %>
+            <% if (PlaceName) { %>
+                at <%=PlaceName%></cite></small>
             <% } %> 
-                <small><cite title="Source Title">"<%= TimeAgo %> near <%= Longitude %>-<%= Latitude %></cite></small>
+         
             </blockquote>
             </div>
     </script>
 
-        <script type="text/template" id="tpl-place-item">
-            <div class="row place">
+    <script type="text/template" id="tpl-place-item">
+            <div class="place">
                 
                 <div> <%= name %></div>
                 
@@ -135,11 +92,13 @@
     <script src="/sandbox/js/underscore-min.js"></script>
     <script src="/sandbox/js/backbone-min.js"></script>
     <script src="/sandbox/js/bootstrap.min.js"></script>
+    <script src="/sandbox/places.js"></script>
+    <script src="/sandbox/post.js"></script>
     <script src="/sandbox/app.js"></script>
     <script src="//js.mobozi.com/v1/mobozi.js"></script>
     <script type="text/javascript">
         mobozi.init('2e041bc0672ac223b240f60c07b06a856e6d9097');
-</script>
+    </script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
 
 
